@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Tech - Shop</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="allproducts.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <span>STEP TECH</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./allproducts.html" class="active">Shop</a>
+
+                <div class="nav-dropdown" id="navDropdown">
+                    <a href="#" class="nav-dropdown-toggle" id="categories-toggle">
+                        Categories <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </a>
+                    <div class="nav-dropdown-menu" id="nav-categories-dropdown"></div>
+
+                    
+                </div>
+            </nav>
+
+            <div class="header-search-bar">
+                <input type="text" id="headerSearchInput" placeholder="Search products...">
+            </div>
+
+            <a href="https://shop.stepacademy.ge/auth/login">
+        <button class="btn-signin">Sign In</button>
+      </a>
+        </div>
+    </header>
+
+    <div class="sub-header">
+        <div class="main-container">
+            <p>Discover our full range of tech products</p>
+        </div>
+    </div>
+
+    <main class="main-container shop-layout">
+        
+        <aside class="sidebar">
+            <div class="filter-card">
+                <h3 class="filter-title">Filters</h3>
+
+                
+                <div class="filter-group">
+                    <h4 class="filter-heading">Categories</h4>
+                    <div class="category-list" id="sidebarCategoryList"></div>
+                </div>
+
+                <div class="filter-group">
+                    <h4 class="filter-heading"><i class="fa-solid fa-star star-filled"></i> Min Rating</h4>
+                    <div class="rating-options">
+                        <label class="rating-btn" data-rating="4">
+                            <span class="stars">★★★★☆</span> <span>4 & up</span>
+                        </label>
+                        <label class="rating-btn" data-rating="3">
+                            <span class="stars">★★★☆☆</span> <span>3 & up</span>
+                        </label>
+                        <label class="rating-btn" data-rating="2">
+                            <span class="stars">★★☆☆☆</span> <span>2 & up</span>
+                        </label>
+                        <label class="rating-btn" data-rating="1">
+                            <span class="stars">★☆☆☆☆</span> <span>1 & up</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4 class="filter-heading">Price Range</h4>
+                    <div class="price-inputs">
+                        <div class="price-field">
+                            <span>Min</span>
+                            <input type="number" id="minPrice" placeholder="$0" min="0">
+                        </div>
+                        <span class="price-dash">-</span>
+                        <div class="price-field">
+                            <span>Max</span>
+                            <input type="number" id="maxPrice" placeholder="$9999" min="0">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4 class="filter-heading">Brand</h4>
+                    <input type="text" id="brandSearchInput" class="brand-input" placeholder="Search brand...">
+                </div>
+
+                <div class="filter-group">
+                    <h4 class="filter-heading">Availability</h4>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="inStockOnly">
+                        <span>In Stock Only</span>
+                    </label>
+                </div>
+
+                <button id="clearFiltersBtn" class="btn-clear-filters">
+                    <i class="fa-solid fa-rotate-left"></i> Clear All Filters
+                </button>
+            </div>
+        </aside>
+
+        <section class="products-section">
+            <div class="products-toolbar">
+                <div class="inner-search-bar">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="mainSearchInput" placeholder="Search products...">
+                </div>
+
+                <div class="toolbar-right">
+                    <span class="product-count" id="productCountText">0 products</span>
+                    <select id="sortSelect" class="sort-select">
+                        <option value="default">Sort by</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating-desc">Highest Rated</option>
+                        <option value="name-asc">Name: A to Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="productContainer" class="product-grid">
+                <div class="loading">Loading products...</div>
+            </div>
+
+            <div id="paginationContainer" class="pagination">
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    <footer class="footer">
+        <p>Created by IT Academy Step Georgia</p>
+    </footer>
+
+    <script src="allproducts.js"></script>
+</body>
+</html>

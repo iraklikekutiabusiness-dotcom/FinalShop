@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STEP TECH - Discover the Future of Technology</title>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+        <span>STEP TECH</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#" class="active">Home</a>
+        <a href="./allproducts.html">Shop</a>
+
+        <div class="nav-dropdown">
+          <a href="#featured"
+             class="nav-dropdown-toggle"
+             id="categories-toggle">
+            Categories
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </a>
+
+          <div class="nav-dropdown-menu" id="nav-categories-dropdown">
+            
+          </div>
+        </div>
+      </nav>
+
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search products..."
+        />
+      </div>
+
+      <a href="https://shop.stepacademy.ge/auth/login">
+        <button class="btn-signin">Sign In</button>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          New Arrivals
+        </span>
+
+        <h1 class="hero-title">
+          Discover the Future<br />
+          of <span class="highlight">Technology</span>
+        </h1>
+
+        <p class="hero-description">
+          Shop the latest smartphones, laptops, and cutting-edge electronics
+          from top brands. Free shipping on orders over $100.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#featured" class="btn btn-primary">
+            Shop Now
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a href="#new-arrivals" class="btn btn-outline">
+            View New Arrivals
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <img
+          src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=800"
+          alt="Headphones"
+          class="hero-img"
+        />
+
+        <div class="tag tag-top">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <span>Smartphones</span>
+        </div>
+
+        <div class="tag tag-right">
+          <i class="fa-solid fa-laptop"></i>
+          <span>Laptops</span>
+        </div>
+
+        <div class="tag tag-bottom">
+          <i class="fa-solid fa-headphones"></i>
+          <span>Audio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section categories-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Shop by Category</h2>
+          <p class="subtitle">Browse our wide selection of tech categories</p>
+        </div>
+
+        <a href="./allproducts.html" class="view-all">
+          View All
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </div>
+
+      <div id="categories" class="categories-grid">
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="featured" class="section products-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Featured Products</h2>
+          <p class="subtitle">Handpicked tech essentials just for you</p>
+        </div>
+
+        <a href="./allproducts.html" class="view-all">
+          View All
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </div>
+
+      <div id="products" class="products-grid"></div>
+    </div>
+  </section>
+
+  <section class="promo-section">
+    <div class="container">
+      <div class="promo-card">
+        <span class="promo-badge">Limited Time Offer</span>
+
+        <h2>Get 20% Off on All Accessories</h2>
+
+        <p>
+          Use code <strong>TECH20</strong> at checkout.
+          Valid until end of month.
+        </p>
+
+        <button class="btn btn-light">Shop Accessories</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="new-arrivals" class="section products-section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="badge-sm">JUST IN</span>
+          <h2>New Arrivals</h2>
+          <p class="subtitle">The latest additions to our collection</p>
+        </div>
+
+        <a href="#featured" class="view-all">
+          View All
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </div>
+
+      <div id="new-arrivals-products" class="products-grid"></div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <div class="container features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-truck"></i></div>
+        <h3>Free Shipping</h3>
+        <p>On orders over $100</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Secure Payment</h3>
+        <p>100% secure transactions</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+        <h3>Easy Returns</h3>
+        <p>30-day return policy</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fa-regular fa-comment-dots"></i></div>
+        <h3>24/7 Support</h3>
+        <p>Dedicated customer care</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="./script.js"></script>
+</body>
+</html>

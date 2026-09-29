@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STEP TECH - Sign In</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <main class="login-wrapper">
+    <section class="left-panel">
+      <div class="hero-content">
+        <a class="brand-link" href="index.html" aria-label="Go to STEP TECH home">
+          <span class="brand-logo-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+          <span class="brand-title">STEP TECH</span>
+        </a>
+
+        <p class="hero-subtext">The latest technology, from the brands you trust. Sign in and find your next favorite.</p>
+
+        <div class="stats-row">
+          <div class="stat-item"><span class="stat-number">50K+</span><span class="stat-label">PRODUCTS</span></div>
+          <div class="stat-item"><span class="stat-number">200+</span><span class="stat-label">BRANDS</span></div>
+          <div class="stat-item"><span class="stat-number">24/7</span><span class="stat-label">SUPPORT</span></div>
+        </div>
+      </div>
+      <div class="panel-glow" aria-hidden="true"></div>
+    </section>
+
+    <section class="right-panel">
+      <div class="form-container">
+        <a class="back-link" href="index.html"><i class="fa-solid fa-arrow-left"></i> Back to shop</a>
+        <div class="header-icon"><i class="fa-solid fa-arrow-right-to-bracket"></i></div>
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Sign in to continue shopping <span aria-hidden="true">🛒</span></p>
+
+        <form class="login-form" id="loginForm">
+          <label class="input-label" for="email">Email address</label>
+          <div class="input-group">
+            <i class="fa-regular fa-envelope input-icon"></i>
+            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+          </div>
+
+          <label class="input-label" for="password">Password</label>
+          <div class="input-group">
+            <i class="fa-solid fa-lock input-icon"></i>
+            <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required />
+            <button class="show-password" type="button" id="togglePassword" aria-label="Show password"><i class="fa-regular fa-eye"></i></button>
+          </div>
+
+          <div class="form-options">
+            <label class="checkbox-container">
+              <input type="checkbox" id="rememberMe" />
+              <span class="checkmark"></span>
+              Remember me
+            </label>
+            <a href="https://shop.stepacademy.ge/auth/forget-password" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitButton">Sign In <i class="fa-solid fa-arrow-right"></i></button>
+          <p class="login-message" id="loginMessage" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="divider"><span>or</span></div>
+        <p class="signup-text">Don't have an account? <a href="https://shop.stepacademy.ge/auth/register">Create one now</a></p>
+        <p class="privacy-note"><i class="fa-solid fa-shield-halved"></i> Your sign-in is securely handled by STEP TECH.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
